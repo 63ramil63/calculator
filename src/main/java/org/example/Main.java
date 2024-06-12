@@ -14,7 +14,7 @@ public class Main {
     ArrayList<String> znaki = new ArrayList<>();
     public static void main(String[] args) {
         Main main = new Main();
-        System.out.println("Введите выражение, в конце поставьте знак =");
+        System.out.println("Введите выражение, в конце поставьте знак =\n" + "sqrt-корень\n cos,sin,tg,ctg\n число#система_счисления\n ");
         main.list.add('+');
         main.list.add('-');
         main.list.add('/');
