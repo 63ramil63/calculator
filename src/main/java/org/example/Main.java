@@ -8,23 +8,23 @@ import java.util.Scanner;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
 
-    ArrayList<Character> list = new ArrayList<>();
+    static ArrayList<Character> list = new ArrayList<>();
 
-    ArrayList<String> numbers = new ArrayList<>();
-    ArrayList<String> znaki = new ArrayList<>();
+    static ArrayList<String> numbers = new ArrayList<>();
+    static ArrayList<String> znaki = new ArrayList<>();
     public static void main(String[] args) {
-        Main main = new Main();
+        
         System.out.println("Введите выражение, в конце поставьте знак =\n" + "sqrt-корень\n cos,sin,tg,ctg\n число#система_счисления\n ");
-        main.list.add('+');
-        main.list.add('-');
-        main.list.add('/');
-        main.list.add('*');
-        main.list.add('%');
-        main.list.add('=');
-        main.readString();
+        list.add('+');
+        list.add('-');
+        list.add('/');
+        list.add('*');
+        list.add('%');
+        list.add('=');
+        readString();
     }
 
-    public void readString(){
+    public static void readString(){
         numbers.clear();
         znaki.clear();
         String number = "";
@@ -163,7 +163,7 @@ public class Main {
         Calc();
     }
 
-    public void Calc(){
+    public static void Calc(){
         float sum = Float.parseFloat(numbers.getFirst());
         for(int i =0; i<znaki.size(); ++i){
             switch (znaki.get(i)){
